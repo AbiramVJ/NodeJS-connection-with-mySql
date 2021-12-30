@@ -4,32 +4,16 @@ import cors from 'cors';
 
 import mysql from 'mysql';
 
-// using the json
+// using the json transfer the data
 app.use(express.json());
 
-//database connection
-import connection from'./config/connection.js'
 
+//API
+import user from './API/user/index.js';
 
-
-app.get("/", (req, res) => {
-    res.json({ message: "Welcome to bezkoder application." });
-  });
-
-  app.get("/user",(req,res)=>{
-      const Sql = "SELECT * FROM user";
-      connection.query(Sql, function(err,results){
-          if(err) {
-              res.status(404).json({error:err.message});
-          }
-        //   res.send(results);
-        res.status(200).json({user:results});
-      });
-
-
-    
-  });
-
+//API
+app.use("/",user);
+ 
 
 // set port, listen for requests
 const PORT = 3000;
