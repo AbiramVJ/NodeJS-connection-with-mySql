@@ -1,8 +1,8 @@
 import express from 'express';
 const app = express();
-import cors from 'cors';
+//import cors from 'cors';
 
-import mysql from 'mysql';
+//import mysql from 'mysql';
 
 // using the json transfer the data
 app.use(express.json());
