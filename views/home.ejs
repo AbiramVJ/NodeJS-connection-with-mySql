@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+</head>
+
+<body>
+    <main>
+        <%- include('Components/navbar') %>
+        <%- include('Components/regForum') %>
+        <% for(const users of user){%> 
+            <table >
+                <tr>
+                  <th><%=users.id %> </th>
+                  <th><%=users.title %></th>
+                  <th><%=users.body %></th>
+                  <th><%=users.create_at %></th>
+                </tr>
+            </table>
+
+            <% } %> 
+        
+       
+        <!-- <div>
+            <ul>
+                <% for(const users of user) {%> 
+                <li><%=users.id %> </li>
+                <li><%=users.title %> </li>
+                </li><%=users.body %> </li>
+                </li><%=users.create_at %> </li>
+                <% } %> 
+            </ul>
+        </div> -->
+
+    </main>
+</body>
+</html>
