@@ -90,6 +90,14 @@ Router.put("/user/:id/edit", async (req, res) => {
   }
 });
 
+
+/**
+ * METHOD:DELETE
+ * PARAMETER:ID
+ * DESCRIPTION: DELETE THE DATA ACCORDING TO THE ID
+ *
+ */
+
 Router.delete("/user/:id/delete",async(req,res)=>{
     try{
         const {id}= req.params;

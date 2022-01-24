@@ -15,13 +15,35 @@
         
         td, th {
           border: 1px solid #dddddd;
-          text-align: left;
           padding: 8px;
+          overflow: hidden;
+          width:50px;
+          cursor: pointer;
+          
+    
         }
-        
-        tr:nth-child(even) {
-          background-color: #dddddd;
+        th:hover{
+          color: orange;
         }
+        .button {
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+
+   
         </style>
 </head>
 
@@ -36,22 +58,14 @@
                   <th><%=users.title %></th>
                   <th><%=users.body %></th>
                   <th><%=users.create_at %></th>
+                  <th><button class="button" >Delete</button></th>
                 </tr>
             </table>
 
             <% } %> 
         
        
-        <!-- <div>
-            <ul>
-                <% for(const users of user) {%> 
-                <li><%=users.id %> </li>
-                <li><%=users.title %> </li>
-                </li><%=users.body %> </li>
-                </li><%=users.create_at %> </li>
-                <% } %> 
-            </ul>
-        </div> -->
+ 
 
     </main>
 </body>
